@@ -1,0 +1,1 @@
+﻿//arrays are a linear collection of elements, these elements can be accessed via indices

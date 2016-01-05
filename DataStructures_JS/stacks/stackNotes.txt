@@ -1,0 +1,1 @@
+stacks are used for expression evaluation, handling function calls

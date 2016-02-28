@@ -1,1 +1,5 @@
 stacks are used for expression evaluation, handling function calls
+
+Stack is the perfect data structure for the following:
+1. Multiple Base Conversions
+2. Palindromes etc

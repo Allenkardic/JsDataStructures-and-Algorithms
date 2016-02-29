@@ -17,7 +17,7 @@ currPos() - returns the current position in list
 moveTo() - moves the current position to specified position\
 contains() - checks if element is contained in list
 **/
-debugger;
+
 function List(){
 	this.listSize = 0;
 	this.pos = 0;
@@ -31,7 +31,7 @@ function List(){
 	this.front = front;
 	this.end = end;
 	this.prev = prev;
-	this.next = next;
+	this.nexts = nexts;
 	this.lengths = lengths;
 	this.currPos = currPos;
 	this.moveTo = moveTo;
@@ -131,6 +131,7 @@ function front(){
 
 function end(){
 	this.pos = this.listSize - 1;
+	
 }
 
 function prev(){
@@ -139,9 +140,9 @@ function prev(){
 	}
 }
 
-function next(){
+function nexts(){
 	if(this.pos < this.listSize - 1){
-		++this.pos;
+		return ++this.pos;
 	}
 	//return false;
 }
@@ -183,13 +184,13 @@ console.log(names.toString(), names.lengths());
 
 names.front();
 console.log(names.getElement());
-// names.next();
-// console.log(names.getElement());
-// names.next();
-// console.log(names.getElement());
-// names.prev();
-// console.log(names.getElement());
+names.nexts();
+console.log(names.getElement());
+names.nexts();
+console.log(names.getElement());
+names.prev();
+console.log(names.getElement());
 
-// for (names.front(); names.currPos() < names.lengths(); names.next()){
-// 	console.log(names.getElement());
-// }
+for (names.front(); names.currPos() < names.lengths(); names.nexts()){
+	console.log(names.getElement());
+}

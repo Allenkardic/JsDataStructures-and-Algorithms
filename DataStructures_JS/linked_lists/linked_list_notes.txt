@@ -1,0 +1,7 @@
+Can be used in almost every situation where a One-dimensional array is used.
+
+Not efficient when data will be accessed randomly
+A collection of objects called nodes, each node is linked to a successor node in the list using an object reference.
+Elements are referenced by their relationship to other elements.
+
+Insertion and Removal are the two functions that best describe why linked lists are so useful.

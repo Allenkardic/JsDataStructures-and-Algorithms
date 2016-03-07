@@ -1,0 +1,5 @@
+A dictionary is a data structure that stores data as key-value pairs, such as the way a phone book stores its data as names and numbers.
+
+The key is the element you use to perform a search and the value is the result of the search.
+
+In javascript the object class is designed to operate as a dictionary, but that's not what will be used here.

@@ -1,0 +1,9 @@
+Hashing is a common technique for storing data in such a way that the data can be 
+inserted and retrieved very quickly. It uses a data structure called a Hash Table.
+Hashes perform poorly on operations involving searching, such as finding the 
+minimum and maximum value in a data set. For these operations, other data structures
+such as the binary search tree are more appropriate.
+
+The Hash table data structure is designed around an array.
+
+

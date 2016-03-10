@@ -3,6 +3,7 @@
 function HashTable(){
    this.table = new Array(137);
    this.simpeHash = simpleHash;
+   this.betterHash = betterHash;
    this.showDistro = show;
    this.put = put;
    //this.get = get;
@@ -10,7 +11,7 @@ function HashTable(){
 
 //places the data in the hash table
 function put(data){
-	var pos = this.simpleHash(data);
+	var pos = this.betterHash(data);
 	this.table[pos] = data;
 }
 
@@ -24,6 +25,20 @@ function simpleHash(){
 	console.log("Hash value: " + data + " -> " + total);
 
 	return total % this.table.length;
+}
+
+//better hash function to avoid collisions
+function betterHash(str, arr){
+	var H = 37; //a constant
+	var total = 0;
+	for (var i = 0; i < str.length; ++i){
+		total += H * total + str.charCodeAt(i);
+	}
+	total  = total % this.table.length;
+	if (total < 0){
+		total += this.table.length-1;
+	}
+	return parseInt(total);
 }
 
 //displays data from the hash table

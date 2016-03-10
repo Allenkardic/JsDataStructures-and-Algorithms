@@ -5,5 +5,11 @@ minimum and maximum value in a data set. For these operations, other data struct
 such as the binary search tree are more appropriate.
 
 The Hash table data structure is designed around an array.
+The choice of a hashing function depends on the data type of the key. If your key is an integer
+then the simplest hash function is to return the key modulo the size of the array.
 
+There are circumstances when this function is not recommended, such as when the keys all end in 0
+and the array size is 10. This is one reason the array size should always be a prime number.
 
+If the keys are random integers, then the hash function should more evenly distribute the keys.
+This type of hashing is known as modular hashing.

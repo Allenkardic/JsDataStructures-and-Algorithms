@@ -1,0 +1,14 @@
+A set is a collection of unique elements. The elements of a set are called members. The two most important properties of a set are that the members of a set are unordered and that no member can occur in a set more than once. 
+
+Sets can be useful when you want to create a data structure that consists of only unique elements, such as a list of each unique word in a text.
+
+Set definititons
+* a set containing no members is called the empty set.
+* two sets are considered equal if they contain exactly the same members.
+* a set is considered a subset of another set if all the members of the first set are contained in the second set.
+
+Set operations
+The fundamental operations perfomed on sets are:
+Union - a new set is obtained by combining the members of one set with the members of another set.
+Intersection - a new set is obtained by adding all the members of one set that also exist in a second set.
+Difference - a new set is obtained by adding all the members of one set except those that also exist in a second set.

@@ -19,6 +19,7 @@ function Graph(v) {
 
 	this.addEdge = addEdge;
 	this.toString = toString;
+	this.showGraph = showGraph;
 }
 //class keeps track of how many edges are represented in a graph, as well
 //as the number of verices, by utilizing an array whose length is equal 
@@ -37,12 +38,12 @@ function addEdge(v,w) {
 //function showGraph
 function showGraph() {
 	for (var i = 0; i < this.vertices; ++i) {
-		putstr(i + " -> ");
+		console.log(i + " -> ");
 		for (var j = 0; j < this.vertices; ++j) {
 			if (this.adj[i][j] != undefined)
-				putstr(this.adj[i][j] + ' ');
+				console.log(this.adj[i][j] + ' ');
 		}
-		print();
+		console.log();
 	}
 }
 

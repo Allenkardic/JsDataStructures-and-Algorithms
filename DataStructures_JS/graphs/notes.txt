@@ -1,0 +1,26 @@
+A graph consists of a set of vertices and edges. Think of a map of a Nigerian state. Each town is connected with other towns via some type of road.
+A map is a type of graph where each town is a vertex, and a road that connects two towns is an edge Edges are defined as a pair(v1,v2), where v1 and v2 are two vertices in a graph. A vertex can also have a weight, which is sometimes called a cost. A graph whose pairs are ordered is called a directed graph, or just a digraph. When pairs are ordered in a directed graph, an arrow is drawn from one pair to another pair. Directed graphs indicate the flow direction from vertex to vertex.
+
+If a graph is not ordered, it is called an unordered graph, or just a graph.
+A path is a sequence of vertices in a graph such that all vertices in the path are connected by edges. The length of a path is the number of edges from the first vertex in the path to the last vertex. A path can also vertex to itself, which is called a loop. Loops have length of 0.
+
+A cycle is a path with at least one edge whose first and last vertices are the same. A simple cycle is one with no repeated edges or vertices for both directed and undirected graphs. Paths that repeat other vertices besides the first and last vertices are called general cycles.
+
+Two vertices are considered strongly connected if there is a path from the first vertex to the second vertex, and vice versa. If the graph is a directed graph, and all its vertices are strongly connected, then the directed graph is considered strongly connected.
+
+Graphs are used to model many different types of real-world systems. One example is traffic flow. The vertices represent street intersections, and the edges represent the streets. Weighted edges can be used to represent speed limits or the number of lanes. Modelers can use the system to determine the best routes and the streets most likely to suffer from traffic jams.
+
+Any type of transportation system can be modeled using a graph. For example, an airline can model its flight system using a graph. Each airport is a vertex, and each flight from one vertex to another is an edge. A weighted edge can represent the cost of a flight from one airport to another, or perhaps the distance from one airport to another, depending upon what is being modeled.
+
+Computer networks, including local area networks and much broader networks such as the internet, are also frequently modeled with graphs. Another example of a real-world system that can be modeled by a graph is a consumer market, where vertices represent both institutions (vendors) and consumers.
+
+N/B - at first glance, the graph looks much like a tree or binary tree. But representing a graph using objects can quickly become ineffiecient, so we will look at different scheme for representing both vertices and edges.
+
+Representing Vertices
+The first step in building a Graph class is to build a Vertex class to store the vertices of a graph. This class has the same duties that the Node class had with linked lists and binary search trees. The Vertex class needs two data members: one for identifyinf the vertex and the other to store a Boolean value indicating whether or not the vertex has been visited. These members are named 'label' and 'wasVisited' respectively. The only function we need for the class is the constructor function that allows us to set the values for a vertex's data members. 
+
+The real information about a graph is stored in the egdes, since the edges describe the structure of a graph. It is tempting to represent a graph as a binary tree, but doing so is a misake. A binary tree has a mostly fixed representation, since a parent node can have only two child nodes, while a graph structure provides much more flexibility. There can be many edges linked to a single vertex or just one edge, for example.
+
+One method used for representing the edges of a graph is called an adjacency list, or an array of adjacency lists. With this method, the edges are stored as vertex-indexed array of lists (arrays) of the vertices adjacent to each vertex. Using this scheme, when we reference a vertex in a program, we can efficiently access the list of all vertices it is connected to. For example, if the vertex 2 is connected to vertices 0, 1, 3 and 4, and is stored in an array position 2, accessing this element gives us access to an array stored at array position 2 that consists of the vertices 0, 1, 3, and 4. This is the representation method we choose to use.
+
+Another method for representing the edges of a graph is called an adjacency matrix. This is a two-dimensional array in which the elements of the array indicate whether an edge exists between two vertices.

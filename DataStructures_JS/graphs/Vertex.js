@@ -40,7 +40,7 @@ function showGraph() {
 	for (var i = 0; i < this.vertices; ++i) {
 		console.log(i + " -> ");
 		for (var j = 0; j < this.vertices; ++j) {
-			if (this.adj[i][j] != undefined)
+			if (this.adj[i][j] !== undefined)
 				console.log(this.adj[i][j] + ' ');
 		}
 		console.log();
@@ -64,3 +64,17 @@ output
 3 -> 1
 4 -? 2
 */
+
+//depth-first function
+function dfs(v) {
+	this.marked[v] = true;
+	//if statement for print is not required
+	//this helps us see the vertices as they are being visited
+	if (this.adj[v] !== undefined)
+		console.log('Visited vertex: ' + v);
+	for (var w in this.adj[v]) {
+		if(!this.marked[w]) {
+			this.dfs(w);
+		}
+	}
+}

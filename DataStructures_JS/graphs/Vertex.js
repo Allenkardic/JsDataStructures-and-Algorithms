@@ -20,6 +20,13 @@ function Graph(v) {
 	this.addEdge = addEdge;
 	this.toString = toString;
 	this.showGraph = showGraph;
+	this.dfs = dfs;
+	//store visited vertices and initialize it to all false values
+	this.marked = [];
+	for (var j = 0; j < this.vertices; ++j) {
+		this.marked[j] = false;
+	}
+
 }
 //class keeps track of how many edges are represented in a graph, as well
 //as the number of verices, by utilizing an array whose length is equal 
